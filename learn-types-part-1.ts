@@ -71,17 +71,11 @@ const upperCased2 = (<string>nikeName).toUpperCase()
 
 // _____________null / undefined__________
 
-const testStr: string = "hello"
+const testStr: string = "Hello"
 
-const greetings = [
-    { name: "Oye" },
-    { name: "Hello" },
-    {
-        name: "Hola"
-    }
-]
+const greetings = [{ name: "Oye" }, { name: "Hello" }, { name: "Hola" }]
 
 const found = greetings.find((greeting) => {
-    greeting.name === testStr
+    return greeting.name === testStr
 })
-// console.log(found.name)//possibly undefined(amaizing without run code it find the error)
+console.log(found?.name) // optional chaining
